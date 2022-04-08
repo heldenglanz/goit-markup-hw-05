@@ -3,7 +3,7 @@
   --second-color: #757575;
   --white-color: #FFFFFF;
   --accent-color: #2196f3;
- --transform-std: cubic-bezier(0.4, 0, 0.2, 1)
+ --transform-std:   background-color 3250ms transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) 5540ms;
 }
 
 p,
@@ -96,41 +96,41 @@ cursor: pointer;
   padding-top: 25px;
   padding-bottom: 25px;
   border-bottom: 1px solid #ECECEC;
- 
 }
 .header .container{
   display: flex;
   align-items: center;
 }
-.header-nav {
-   
-   
-}
 .header-list {
   display: flex;
-
 }
-.header-list.list-item,
-.header-contacts.list-item {
-  color: var(--main-color)
-}
-.header-list .list-item:not(:last-child){
+.header-list .list-item:not(:last-child) {
   margin-right: 50px;
 }
+/* .header-list.list-item,
+.header-contacts.list-item {
+  color: var(--main-color)
+} */
 .header-contacts {
   display: flex;
   align-items: baseline;
   margin-left: auto;
 }
+.header-mail {
+  margin-right: 50px;
+}
 .header-link,
 .header-mail,
 .header-tel{
-  
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--main-color);
+  transition-property:color;
+  transition-duration:250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay:250ms;
 }
 .header-mail,
 .header-tel {
@@ -143,27 +143,18 @@ cursor: pointer;
 .header-tel:hover,
 .header-tel:focus {
   color: var(--accent-color);
-  border: none;
-}
-
-.header-mail {
-  margin-right: 50px;
-  
-}
-.header-tel{
-
 }
 .contact-icon{
   margin-right: 10px;
 }
-.icon-mail{
-  
- 
-  fill:var(--second-color);
-}
+
+.icon-mail,
 .icon-tel{
   fill:var(--second-color);
-  
+  transition-property:fill;
+  transition-duration:250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay:250ms;
 
 }
 .header-mail:hover .contact-icon,
@@ -278,7 +269,6 @@ background-image: url(../svg/antenna.svg)
 }
 .tasks-item{
   width: calc((100% - 90px) / 4);
- 
   min-width: 270px;
 }
 .tasks-item:not(:last-child){
@@ -378,38 +368,43 @@ padding-bottom: 30px;
   justify-content: center;
   
 }
-.social-item{
 
-}
 .social-link{
   display: block;
   padding: 12px;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  
+  background-color: var(--white-color);
+  transition-property: background-color;
+transition-duration:250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-delay:250ms;
+
 }
 .social-item:not(:last-child){
   margin-right: 10px;
 }
 
 .social-icon{
-  
   fill: #AFB1B8;
   width: 20px;
   height: 20px;
+  transition-property:fill, background-color;
+  transition-duration:250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay:250ms;
 }
 .social-link:hover,
 .social-link:focus {
- 
   background-color: var(--accent-color);
 }
 
 .social-link:hover > .social-icon,
-.social-link:focus >.social-icon
-{
+.social-link:focus >.social-icon{
 fill: var(--white-color);
 }
+
 
 
 
@@ -440,10 +435,13 @@ padding-bottom: 94px;
   display: block;
   width: 170px;
   height: 92px;
-
 border: 1px solid #AFB1B8;
 border-radius: 4px;
-
+background-color: var(--white-color);
+transition-property: background-color, border-color;
+transition-duration:250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-delay:250ms;
 }
 
 .client-icon{
@@ -452,12 +450,15 @@ border-radius: 4px;
 width: 106px;
 height: 60px;
 fill: #AFB1B8;
+transition-property:fill;
+transition-duration:250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-delay:250ms;
 
 }
 
 .client-link:hover,
 .client-link:focus {
-
   border-color: var(--accent-color);
 }
 
@@ -466,13 +467,13 @@ fill: #AFB1B8;
 .client-link:focus >.client-icon{
   fill: var(--accent-color);
   
-  
 }
 .client-item:not(:last-child) {
   margin-right: 30px;
 }
 
 /*---------FOOTER---------*/
+
 .footer {
   background-color: #2f303a;
   padding-top: 60px;
@@ -505,7 +506,6 @@ fill: #AFB1B8;
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
- 
 }
 
 .footer-list > .list-item:not(:last-child){
@@ -537,7 +537,6 @@ margin-bottom: 20px;
 
 .social-links > .footer-right{
  
-  
 }
 
 .footcolor{
@@ -598,6 +597,7 @@ background-color:  rgba(255, 255, 255, 0.1);
 .portfolio-projects {
   display: flex;
   flex-wrap: wrap;
+  max-width: calc(100%-15px);
   margin-right: -15px;
   margin-left: -15px;
 }
