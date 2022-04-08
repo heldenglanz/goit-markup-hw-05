@@ -3,6 +3,7 @@
   --second-color: #757575;
   --white-color: #FFFFFF;
   --accent-color: #2196f3;
+ --transform-std: cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 p,
@@ -48,6 +49,10 @@ ul {
 ul {
   padding-inline-start: 0;
 }
+
+
+
+
 
 .btn {
   display: block;
